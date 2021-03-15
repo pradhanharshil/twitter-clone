@@ -2,4 +2,4 @@
 Twitter clone webpage made using React.
 
 ## Screenshots
-![Screenshot](src/assets/screenshots/output.png)
+![Screenshot](src/assets/screenshots/output-twitter.png)
