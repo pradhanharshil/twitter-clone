@@ -13,7 +13,14 @@ const Feed = () => {
                 <NewTweet />
                 <TweetCard />
                 <TweetCard />
-                {tweetsList.tweets.map(tweet => <TweetCard key={tweet.id} time={tweet.getTime} text={tweet.getText} />)}
+                {tweetsList.tweets.map(tweet => 
+                    <TweetCard 
+                        likes={tweet.getLikes}
+                        retweets={tweet.getRetweets}
+                        key={tweet.id} 
+                        time={tweet.getTime} 
+                        text={tweet.getText} />)
+                }
             </div>
         </div>
     );

@@ -1,10 +1,10 @@
 import style from "./Feed.module.css";
 import icon from "../../assets/icons/topbar.png"
 
-const TopBar = () => {
+const TopBar = ({title}) => {
     return (
         <div className={style.topbar}>
-            <p>Home</p>
+            <p>{title}</p>
             <img
                 className={style.logo}
                 src={icon}

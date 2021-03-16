@@ -25,6 +25,10 @@ class TweetsList {
             this.tweets.splice(index, 1);
         }
     }
+    find(id) {
+        const index = this.tweets.findIndex(item => item.id === id);
+        return this.tweets[index];
+    }
 }
 
 export default new TweetsList();

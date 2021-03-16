@@ -4,27 +4,33 @@ import comment from "../../assets/icons/comment.png";
 import retweet from "../../assets/icons/retweet.png";
 import reply from "../../assets/icons/reply.png";
 
-const Panel = () => {
+const Panel = ({likes=null, retweets=null}) => {
     return (
         <div className={style.panel}>
             <img
-                className={style.icon} 
+                className={style.icon}
                 src={comment}
-                alt="Comment"/>
+                alt="Comment" />
+            <div className={style.tweet_count}>
+                <img
+                    className={style.icon}
+                    src={retweet}
+                    alt="Retweet" />
+                <p>{retweets}</p>
+            </div>
+            <div className={style.tweet_count}>
+                <img
+                    className={style.icon}
+                    src={like}
+                    alt="Like" />
+                <p>{likes}</p>
+            </div>
             <img
-                className={style.icon} 
-                src={retweet}
-                alt="Retweet"/>
-            <img
-                className={style.icon} 
-                src={like}
-                alt="Like"/>
-            <img
-                className={style.icon} 
+                className={style.icon}
                 src={reply}
-                alt="Reply"/>
+                alt="Reply" />
         </div>
-    );  
+    );
 }
 
 export default Panel;
