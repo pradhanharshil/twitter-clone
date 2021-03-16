@@ -6,21 +6,26 @@ import {
     Switch,
     Route
 } from "react-router-dom";
+import Thread from "../Thread/Thread";
 
 const Feed = () => {
     return (
         <div className={style.feed}>
-            <TopBar title="Home" />
-            <div className={style.tweets_list}>
-                <Router>
+            <Router>
+                <TopBar title="Home" />
+                <div className={style.tweets_list}>
                     <Switch>
-                        <Route 
-                            exact 
+                        <Route
+                            exact
                             path="/"
                             component={TweetsContainer} />
+                        <Route
+                            exact
+                            path="/tweet/:id"
+                            component={Thread} />
                     </Switch>
-                </Router>
-            </div>
+                </div>
+            </Router>
         </div>
     );
 };

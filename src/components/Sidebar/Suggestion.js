@@ -3,7 +3,6 @@ import Button from "../Widgets/Button";
 import style from "./Sidebar.module.css";
 
 const Suggestion = ({ img, user }) => {
-    console.log(img);
     return (
         <div className={style.suggestion}>
             <div className={style.about}>

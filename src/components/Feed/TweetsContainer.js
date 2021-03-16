@@ -14,6 +14,7 @@ const TweetsContainer = () => {
                     likes={tweet.getLikes}
                     retweets={tweet.getRetweets}
                     key={tweet.id}
+                    id={tweet.id}
                     deleteTweet={() => tweetsList.deleteTweet(tweet.id)}
                     time={tweet.getTime}
                     text={tweet.getText} />)
