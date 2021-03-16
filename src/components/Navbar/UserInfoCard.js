@@ -1,6 +1,7 @@
 import style from "./Navbar.module.css";
 import user from "../../assets/images/user.jpg";
 import dots from "../../assets/icons/dots.png"
+import CardContent from "../Widgets/CardContent";
 
 const UserInfoCard = () => {
     return (
@@ -9,10 +10,10 @@ const UserInfoCard = () => {
                 src={user}
                 className={style.user_info_card_img}
                 alt="User" />
-            <div className={style.user_detail}>
-                <span className={style.bold}>Ubuntu</span>
-                <span className={style.uname}>@Ubuntu</span>
-            </div>
+            <CardContent 
+                className={style.user_detail}
+                title="Ubuntu"
+                text="@Ubuntu" />
             <div>
                 <img
                     className={style.options_img}
