@@ -16,14 +16,14 @@ const Panel = ({likes=null, retweets=null}) => {
                     className={style.icon}
                     src={retweet}
                     alt="Retweet" />
-                <p>{retweets}</p>
+                <p className={style.count}>{retweets}</p>
             </div>
             <div className={style.tweet_count}>
                 <img
                     className={style.icon}
                     src={like}
                     alt="Like" />
-                <p>{likes}</p>
+                <p className={style.count}>{likes}</p>
             </div>
             <img
                 className={style.icon}
