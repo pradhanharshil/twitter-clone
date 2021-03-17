@@ -1,5 +1,21 @@
-.thread {
-    height: 50vh;
-    width: 100%;
-    border: 1px solid black;
+.reply {
+    display: flex;
+    justify-content: center;
+}
+.text {
+    width: 70%;
+    padding: 15px 5px;
+    background-color: #ebeef0;
+    color: gray;
+    border: none;
+}
+.button {
+    background-color: #248cfa;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+} 
+.text:focus {
+    border: none;
+    outline: none;
 }
