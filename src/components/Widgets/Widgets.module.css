@@ -5,3 +5,11 @@
     color: gray;
     font-size: 0.95rem;
 }
+@media (min-width: 700px) and (max-width: 850px) {
+    .bold {
+        font-size: 15px;
+    }
+    .gray {
+        font-size: 13px;
+    }
+}
