@@ -1,9 +1,16 @@
 # Twitter Clone
 Twitter clone webpage made using React.
 
-## Screenshots
-### Desktop View
+## Desktop View
+### Screen width > 1000px
 ![Screenshot](src/assets/screenshots/output.png)
 
-### Mobile View
+### Screen width between 700px and 1000px
+![Screenshot](src/assets/screenshots/output-medium.png)
+
+### Screen width between 600px and 700px
+![Screenshot](src/assets/screenshots/output-small.png)
+
+## Mobile View
+### Screen size <= 600
 ![Screenshot](src/assets/screenshots/output-mobile.png)
