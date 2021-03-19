@@ -1,7 +1,8 @@
 import {    
     makeObservable,
     observable,
-    computed
+    computed,
+    action
 } from "mobx";
 
 class Tweet {
@@ -10,17 +11,29 @@ class Tweet {
     likes = parseInt(Math.random() * 500);
     retweets = parseInt(Math.random() * 500);
     time = new Date().toDateString();
+    replies = [];
     constructor(text) {
         makeObservable(this, {
             text: observable,
             likes: observable,
             retweets: observable,
+            replies: observable,
+            reply: action,
             getLikes: computed,
             getRetweets: computed,
             getTime: computed,
             getText: computed
         });
         this.text = text;
+    }
+    reply(text) {
+        this.replies.push(new Tweet(text));
+    }
+    deleteReply(id) {
+        const index = this.replies.findIndex(reply => reply.id === id);
+        if (index > -1) {
+            this.replies.splice(index , 1);
+        }
     }
     get getText() {
         return this.text;
