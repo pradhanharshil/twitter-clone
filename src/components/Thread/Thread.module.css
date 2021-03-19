@@ -1,9 +1,13 @@
 .reply {
     display: flex;
     justify-content: center;
+    align-items: center;
+    background-color: white;
+    height: 3rem;
 }
 .text {
     width: 70%;
+    height: 10px;
     padding: 15px 5px;
     background-color: #ebeef0;
     color: gray;
@@ -14,6 +18,7 @@
     color: white;
     border: none;
     padding: 5px 10px;
+    height: 40px;
 } 
 .text:focus {
     border: none;
