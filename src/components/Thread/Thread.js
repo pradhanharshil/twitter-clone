@@ -39,7 +39,7 @@ const Thread = ({ match }) => {
             </div>
             {data.replies.map(reply =>
                 <TweetCard
-                    deleteTweet={reply.deleteReply(reply.id)}
+                    deleteTweet={() => data.deleteReply(reply.id)}
                     key={reply.id}
                     text={reply.getText}
                     likes={reply.likes}

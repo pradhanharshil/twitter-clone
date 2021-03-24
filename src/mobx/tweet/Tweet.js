@@ -19,6 +19,7 @@ class Tweet {
             retweets: observable,
             replies: observable,
             reply: action,
+            deleteReply: action,
             getLikes: computed,
             getRetweets: computed,
             getTime: computed,
