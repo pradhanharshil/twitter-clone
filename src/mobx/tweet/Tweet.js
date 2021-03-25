@@ -10,6 +10,7 @@ class Tweet {
     text = null;
     likes = parseInt(Math.random() * 500);
     retweets = parseInt(Math.random() * 500);
+    edited = false;
     time = new Date().toDateString();
     replies = [];
     constructor(text) {

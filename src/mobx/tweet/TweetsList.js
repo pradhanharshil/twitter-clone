@@ -25,6 +25,13 @@ class TweetsList {
             this.tweets.splice(index, 1);
         }
     }
+    editTweet(id, text) {
+        const index = this.tweets.findIndex(tweet => tweet.id === id);
+        if (index > -1) {
+            this.tweets[index].text = text;
+            this.tweets[index].edited = true;
+        }
+    }
     find(id) {
         const index = this.tweets.findIndex(item => item.id === id);
         return this.tweets[index];

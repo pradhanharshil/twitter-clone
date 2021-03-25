@@ -22,6 +22,7 @@ const TweetsContainer = () => {
             <NewTweet />
             {tweetsList.tweets.map(tweet =>
                 <TweetCard
+                    edited={tweet.edited}
                     likes={tweet.getLikes}
                     retweets={tweet.getRetweets}
                     key={tweet.id}
