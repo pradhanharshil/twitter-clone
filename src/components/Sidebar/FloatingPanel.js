@@ -3,6 +3,7 @@ import { ClipLoader } from "react-spinners";
 import style from "./Sidebar.module.css";
 
 const FloatingPanel = ({ header, render, data, styles = null, loading = false }) => {
+    const css = 'margin: 25% 0;'
     return (
         <div className={style.floating_panel}>
             <div className={style.header}>{header}</div>
@@ -10,7 +11,8 @@ const FloatingPanel = ({ header, render, data, styles = null, loading = false })
                 {loading
                     ? <ClipLoader
                         color="#248cfa"
-                        loading={true} />
+                        loading={true}
+                        css={css} />
                     : render(data)}
             </div>
         </div>
