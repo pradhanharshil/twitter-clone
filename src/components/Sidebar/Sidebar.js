@@ -8,12 +8,14 @@ import CardContent from "../Widgets/CardContent";
 
 const Sidebar = () => {
     const [users, setUsers] = useState([]);
+    const [loading, setLoading] = useState(true);
     useEffect(() => {
         fetch("https://api.github.com/users")
             .then(response => response.json())
             .then(data => {
                 const index = Math.random() * (data.length - 5);
                 setUsers(data.slice(index, index+5));
+                setLoading(false);
             });
     }, []);
 
@@ -34,8 +36,7 @@ const Sidebar = () => {
                                 key={trend.trend}
                                 title={`#${trend.trend}`}
                                 text={`${trend.tweets} Tweets`} />)
-                    }
-                    fallback={"test"} />
+                    }/>
                 <FloatingPanel
                     styles={style.center}
                     header="Who to follow"
@@ -46,7 +47,8 @@ const Sidebar = () => {
                                 key={user.login}
                                 img={user.avatar_url}
                                 user={user.login} />)
-                    } />
+                    }
+                    loading={loading} />
             </div>
         </div>
     );
