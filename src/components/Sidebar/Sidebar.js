@@ -13,8 +13,8 @@ const Sidebar = () => {
         fetch("https://api.github.com/users")
             .then(response => response.json())
             .then(data => {
-                const index = Math.random() * (data.length - 5);
-                setUsers(data.slice(index, index+5));
+                const index = Math.random() * (data.length - 6);
+                setUsers(data.slice(index, index + 6));
                 setLoading(false);
             });
     }, []);
@@ -36,7 +36,7 @@ const Sidebar = () => {
                                 key={trend.trend}
                                 title={`#${trend.trend}`}
                                 text={`${trend.tweets} Tweets`} />)
-                    }/>
+                    } />
                 <FloatingPanel
                     styles={style.center}
                     header="Who to follow"

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import style from "./Navbar.module.css";
 import NavItem from "./NavItem";
 import Button from "../Widgets/Button";
@@ -24,18 +25,24 @@ const Navbar = () => {
                 </div>
             </div>
             <div className={style.nav_items}>
-                <NavItem
-                    name="Home"
-                    logo={home} />
+                <Link to="/">
+                    <NavItem
+                        name="Home"
+                        logo={home} />
+                </Link>
                 <NavItem
                     name="Explore"
                     logo={explore} />
-                <NavItem
-                    name="Notifications"
-                    logo={notifications} />
-                <NavItem
-                    name="Messages"
-                    logo={messages} />
+                <Link to="/notifications">
+                    <NavItem
+                        name="Notifications"
+                        logo={notifications} />
+                </Link>
+                <Link to="/messages">
+                    <NavItem
+                        name="Messages"
+                        logo={messages} />
+                </Link>
                 <NavItem
                     name="Bookmarks"
                     logo={bookmarks} />
@@ -48,9 +55,9 @@ const Navbar = () => {
                 <NavItem
                     name="More"
                     logo={more} />
-                <Button 
+                <Button
                     className={style.item_button}
-                    children="Tweet"/>
+                    children="Tweet" />
                 <UserInfoCard />
             </div>
         </div>

@@ -1,11 +1,10 @@
 import style from "./Feed.module.css";
 import icon from "../../assets/icons/topbar.png";
-import {Link} from "react-router-dom";
 
-const TopBar = ({title}) => {
+const TopBar = ({ title }) => {
     return (
         <div className={style.topbar}>
-            <Link to="/"><p>{title}</p></Link>
+            <p>{title}</p>
             <img
                 className={style.logo}
                 src={icon}

@@ -1,0 +1,21 @@
+.messages {
+    display: flex;
+    flex-direction: column;
+}
+.message_card {
+    display: flex;
+    height: 3.5rem;
+    border: 1px solid lightgray;
+}
+.card_content_component {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+}
+.image {
+    height: 2.5rem;
+    width: 2.5rem;
+    padding: 10px;
+    border-radius: 10rem;
+}

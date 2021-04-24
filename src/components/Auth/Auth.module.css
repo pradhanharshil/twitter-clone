@@ -1,0 +1,31 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10rem auto;
+    padding: 2rem;
+    border: 1px solid lightgray;
+}
+.form p {
+    font-size: larger;
+}
+.input {
+    background-color: #ebeef0;
+    padding: 10px;
+    width: 15rem;
+    border: none;
+    outline: none;
+    border-radius: 10rem;
+}
+.button {
+    background-color: #248cfa;
+    padding: 8px 10px;
+    color: white;
+    border-radius: 10rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.form * {
+    margin: 10px 0;
+}
